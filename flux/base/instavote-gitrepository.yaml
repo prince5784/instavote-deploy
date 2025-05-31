@@ -1,0 +1,16 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  annotations:
+    reconcile.fluxcd.io/requestedAt: "2021-04-15T05:16:15.581555022z"
+  name: instvote
+  namespace: flux-system
+spec:
+        gitImplementation: go-git
+  interval: 30s
+  ref:
+    branch: main
+  secretRef:
+    name: github-instavote
+  url: https://github.com/prince5784/instavote.git

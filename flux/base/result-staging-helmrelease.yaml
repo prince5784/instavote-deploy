@@ -1,0 +1,16 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: result
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      chart: ./deploy/charts/result
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: GitRepository
+        name: vote
+  interval: 10m0s
+  targetNamespace: instavote

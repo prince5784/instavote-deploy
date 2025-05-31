@@ -1,0 +1,11 @@
+---
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Provider
+metadata:
+  name: slack
+  namespace: flux-system
+spec:
+  channel: fluxcd-1
+  secretRef:
+    name: slack-url
+  type: slack
