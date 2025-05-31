@@ -5,7 +5,7 @@ metadata:
   annotations:
     reconcile.fluxcd.io/requestedAt: "2021-04-15T05:16:15.581555022z"
   name: instvote
-  namespace: flux-system
+  namespace: instavote
 spec:
         gitImplementation: go-git
   interval: 30s
